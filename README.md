@@ -38,7 +38,13 @@ Aplicação web interativa desenvolvida com **HTML5, CSS3, JavaScript puro (Vani
 
 ---
 
-## 🚀 Como Executar o Projeto
+## 🌐 Acessar o Projeto Online
+
+👉 **https://joaoatrigueiro.github.io/projeto-js-html/**
+
+---
+
+## 🚀 Como Executar o Projeto Localmente
 
 1. Clone este repositório:
    ```bash
