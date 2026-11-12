@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-BR" data-bs-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SuperLista - 2. Lista de Compras</title>
+    <!-- CDN Oficial do Bootstrap 5.3 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <!-- Conexão direta com o CSS da Tela 2 -->
+    <link rel="stylesheet" href="tela2-compras.css" />
+  </head>
+  <body>
+    <!-- Menu de navegação padronizado com Bootstrap (nav-pills) -->
+    <nav class="nav nav-pills menu-topo">
+      <a class="nav-link" href="tela1-inicio.html">1. Início</a>
+      <a class="nav-link active" href="tela2-compras.html">2. Lista de Compras</a>
+      <a class="nav-link" href="tela3-orcamento.html">3. Calculadora de Gastos</a>
+    </nav>
+
+    <main class="container-app">
+      <h1>📝 Lista de Compras</h1>
+      <p class="subtitulo">
+        Adicione produtos ao carrinho e clique neles para marcar como comprado!
+      </p>
+
+      <!-- Barra de Pesquisa do Bootstrap (Input Group) -->
+      <div class="input-group mb-3">
+        <span class="input-group-text">🔍</span>
+        <input
+          type="search"
+          id="input-pesquisa-produto"
+          class="form-control"
+          placeholder="Pesquisar item na lista (ex: Arroz)..."
+        />
+      </div>
+
+      <!-- Barra de Adicionar Produto padronizada com Input Group do Bootstrap -->
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          id="input-produto"
+          class="form-control"
+          placeholder="Novo item (ex: Refrigerante)"
+        />
+        <input
+          type="number"
+          id="input-qtd"
+          class="form-control input-qtd-curto"
+          value="1"
+          min="1"
+          title="Quantidade"
+        />
+        <button id="btn-adicionar" type="button" class="btn btn-primary">
+          + Adicionar
+        </button>
+      </div>
+
+      <!-- Contador dinâmico e botão de limpar do Bootstrap -->
+      <div class="resumo-lista">
+        <span id="contador-itens" class="badge text-bg-secondary p-2">
+          Total de itens: 0
+        </span>
+        <button
+          id="btn-limpar-comprados"
+          type="button"
+          class="btn btn-outline-danger btn-sm"
+        >
+          🗑️ Limpar Comprados
+        </button>
+      </div>
+
+      <!-- Onde o Array listaCompras será renderizado -->
+      <ul id="ul-compras" class="lista-produtos"></ul>
+
+      <div class="d-grid">
+        <a href="tela3-orcamento.html" class="btn btn-success">
+          Ir para Calculadora de Gastos →
+        </a>
+      </div>
+    </main>
+
+    <!-- Conexão direta com o arquivo JavaScript da Tela 2 -->
+    <script src="tela2-compras.js"></script>
+  </body>
+</html>
